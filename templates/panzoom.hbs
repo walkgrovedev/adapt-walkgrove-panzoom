@@ -1,12 +1,39 @@
 <div class="component__inner panzoom__inner">
   {{> component this}} 
 
-  {{!-- <div class="panzoom__main">
-  {{#each _items}}
+  <div class="panzoom__main">
+    <div class="panzoom__images">
+      <img class="panzoom__image-placeholder" src="{{_graphic.src}}" alt="" /> 
+      <img class="panzoom__image" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+    </div>
 
-  {{/each}}
-  </div> 
+    {{#each _items}}
+      <div class="panzoom__widget">
+        <img class="panzoom__widget-image" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}}/>
+        <div class="panzoom__widget-content">
+          <div class="panzoom__widget-title">{{{title}}}</div>
+          <div class="panzoom__widget-body">{{{body}}}</div>
+        </div>
+      </div>
+    {{/each}}
   
-  {{#if body}} {{/if}} --}}
+  
+    {{!-- {{#if body}} {{/if}} --}}
+
+    <div class="panzoom__controls">
+      <button  class="btn js-panzoom-prev is-hidden" aria-label="{{_globals._accessibility._ariaLabels.previous}}">
+        <span class="icon icon-controls-left "></span>
+      </button>
+
+      <button class="btn js-panzoom-next is-hidden" aria-label="{{_globals._accessibility._ariaLabels.next}}">
+        <span class="icon icon-controls-right "></span>
+      </button>
+      
+      <button class="btn js-panzoom-start" aria-label="{{{startText}}}">
+        <span class="">{{{startText}}}</span>
+      </button>
+    </div>
+
+  </div> 
 
 </div>

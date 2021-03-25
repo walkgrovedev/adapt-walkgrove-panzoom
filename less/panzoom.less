@@ -1,0 +1,171 @@
+.panzoom {
+
+    &__inner {
+        width:100%;
+        height: auto;
+        position: relative;
+    }
+
+    &__main {
+        width:100%;
+        height:100%;
+        position: relative;
+    }
+    
+    &__images {
+        overflow: hidden;
+        
+        position: relative;   
+        top:0;
+        left:0;
+
+        @media (max-width: @device-width-small) { 
+            display: none;
+        }
+
+        .panzoom__image-placeholder {
+            position: absolute;
+            top:0;
+            left:0;
+
+            opacity: 0;
+        }
+
+        .panzoom__image {
+
+            position: relative;
+            display:inline-block;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+
+            &.scale {
+                animation-name: scaleIn;
+                animation-duration: 1s;
+                transform: scale(2);
+            }
+        }
+    }
+
+    &__widget {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+
+        display: none;
+
+        @media (max-width: @device-width-medium) { 
+            
+        }
+
+        @media (max-width: @device-width-small) { 
+            position: relative;
+            margin-bottom: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        &.is-visible {
+            display: block;
+
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
+
+        .panzoom__widget-image {
+            opacity: 0;
+
+            @media (max-width: @device-width-small) { 
+                opacity: 1;
+            }
+        }
+
+        .panzoom__widget-content {
+            position: absolute;
+            bottom: 0;
+
+            width: 100%;
+
+            @media (max-width: @device-width-small) { 
+                position: relative;
+            }
+
+            background-color: @item-color-selected;
+            color: @item-color-inverted-selected;
+            padding: 2rem;
+
+            @media (max-width: @device-width-medium) { 
+                padding: 1rem;
+            }
+
+            .panzoom__widget-title {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        z-index:1;
+        
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: @device-width-small) { 
+            display: none;
+        }
+
+        .btn {
+            top:50%;
+            transform: translate(0%,-50%);
+            position: absolute;
+
+            &.is-disabled {
+                pointer-events: none;
+                background-color: @disabled;
+                color: @disabled-inverted;
+            }
+
+            &.is-hidden {
+                display: none;
+            }
+        }
+
+        .js-panzoom-prev {
+            float: left;
+            left:0;
+        }
+
+        .js-panzoom-next {
+            float: right;
+            right:0;
+        }
+
+        .js-panzoom-start {
+            
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes scaleIn {
+    from { transform: scale(1); }
+    to { transform: scale(2); }
+}
