@@ -5,6 +5,7 @@
     <div class="panzoom__images">
       <img class="panzoom__image-placeholder" src="{{_graphic.src}}" alt="" /> 
       <img class="panzoom__image" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+      <img class="panzoom__image-small" src="{{_graphic.src}}" alt="" />
     </div>
 
     {{#each _items}}

@@ -19,9 +19,9 @@
         top:0;
         left:0;
 
-        @media (max-width: @device-width-small) { 
-            display: none;
-        }
+        // @media (max-width: @device-width-small) { 
+        //     display: none;
+        // }
 
         .panzoom__image-placeholder {
             position: absolute;
@@ -44,6 +44,24 @@
                 animation-name: scaleIn;
                 animation-duration: 1s;
                 transform: scale(2);
+            }
+        }
+
+        .panzoom__image-small {
+            position: absolute;
+            right:0;
+            bottom:0;
+            
+            max-width: 20%;
+            min-width: 20%;
+            border: 2px solid @item-color-selected;
+
+            display: none;
+
+            &.is-visible {
+                display: block;
+                animation-name: fadeIn;
+                animation-duration: 1s;
             }
         }
     }
@@ -89,7 +107,7 @@
             position: absolute;
             bottom: 0;
 
-            width: 100%;
+            width: 80%;
 
             @media (max-width: @device-width-small) { 
                 position: relative;
@@ -97,11 +115,7 @@
 
             background-color: @item-color-selected;
             color: @item-color-inverted-selected;
-            padding: 2rem;
-
-            @media (max-width: @device-width-medium) { 
-                padding: 1rem;
-            }
+            padding: 1rem;
 
             .panzoom__widget-title {
                 font-size: 1.2rem;
@@ -147,11 +161,15 @@
         .js-panzoom-prev {
             float: left;
             left:0;
+            border-radius: 0px;
+            min-width: 0;
         }
 
         .js-panzoom-next {
             float: right;
             right:0;
+            border-radius: 0px;
+            min-width: 0;
         }
 
         .js-panzoom-start {

@@ -102,6 +102,7 @@ define([
       this.$('.js-panzoom-start').addClass('is-hidden');
       this.$('.js-panzoom-prev').removeClass('is-hidden');
       this.$('.js-panzoom-next').removeClass('is-hidden');
+      this.$('.panzoom__image-small').addClass('is-visible');
 
       this.$('.panzoom__image').addClass('scale');
       setTimeout(()=>{ this.onNext(); }, 1500);
