@@ -29,6 +29,138 @@
       "validators": [],
       "help": "This is the instruction text",
       "translatable": true
+    },
+    "mobileInstructions": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text for mobile",
+      "translatable": true
+    },
+    "_graphic": {
+      "type": "object",
+      "required": false,
+      "title": "Main explore",
+      "properties": {
+        "src": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": "Asset:image",
+          "validators": [],
+          "help": "This is the image which zooms and pans"
+        },
+        "alt": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Alternative text for the image",
+          "translatable": true
+        }
+      }
+    },
+    "startText": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the start button title",
+      "translatable": true
+    },
+    "endInstructions": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instructions once all items have been viewed i.e. to scroll down,
+      "translatable": true
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Flipcards",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Area content title",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "body": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "title": "Area content info",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_pan": {
+            "type": "object",
+            "required": true,
+            "properties": {
+              "_x": {
+                "type": "number",
+                "required": true,
+                "default": "",
+                "title": "X position",
+                "inputType": "Number",
+                "validators": ["required", "number"],
+                "help": "",
+                "translatable": false
+              },
+              "_y": {
+                "type": "number",
+                "required": true,
+                "default": "",
+                "title": "Y position",
+                "inputType": "Number",
+                "validators": ["required", "number"],
+                "help": "",
+                "translatable": false
+              }
+            }
+          },
+          "_graphic": {
+            "type": "object",
+            "required": false,
+            "title": "Main explore",
+            "properties": {
+              "src": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Asset:image",
+                "validators": [],
+                "help": "This is the image which shows for mobile"
+              },
+              "alt": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "Alternative text for the image",
+                "translatable": true
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
