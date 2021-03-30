@@ -112,7 +112,7 @@ define([
 
   },
   {
-    panzoom: 'panzoom'
+    template: 'panzoom'
   });
 
   return Adapt.register('panzoom', {
