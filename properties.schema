@@ -78,7 +78,7 @@
       "default": "",
       "inputType": "Text",
       "validators": [],
-      "help": "This is the instructions once all items have been viewed i.e. to scroll down,
+      "help": "This is the instructions once all items have been viewed i.e. to scroll down",
       "translatable": true
     },
     "_items": {
