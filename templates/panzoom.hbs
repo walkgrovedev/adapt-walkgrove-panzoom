@@ -4,6 +4,11 @@
   <div class="panzoom__main">
     <div class="panzoom__images">
       <img class="panzoom__image-placeholder" src="{{_graphic.src}}" alt="" /> 
+
+      {{#each _items}}
+      <img class="panzoom__image-fade" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
+      {{/each}}
+      
       <img class="panzoom__image" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} />
       <img class="panzoom__image-small" src="{{_graphic.src}}" alt="" />
     </div>
@@ -11,6 +16,7 @@
     {{#each _items}}
       <div class="panzoom__widget">
         <img class="panzoom__widget-image" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}}/>
+        {{!-- <img class="panzoom__widget-image-fade" src="{{_graphic.src}}" {{#if _graphic.alt}}aria-label="{{_graphic.alt}}"{{else}}aria-hidden="true" alt=""{{/if}} /> --}}
         <div class="panzoom__widget-content">
           <div class="panzoom__widget-title">{{{title}}}</div>
           <div class="panzoom__widget-body">{{{body}}}</div>

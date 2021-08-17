@@ -84,7 +84,7 @@
     "_items": {
       "type": "array",
       "required": true,
-      "title": "Flipcards",
+      "title": "PanZoom Items",
       "items": {
         "type": "object",
         "required": true,

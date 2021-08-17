@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git://github.com/walkgrovedev/adapt-walkgrove-panzoom.git"
   },
-  "framework": ">=5",
+  "framework": "5",
   "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-panzoom.git",
   "component": "panzoom",
   "displayName": "Panzoom",
@@ -15,14 +15,14 @@
     "adapt-component"
   ],
   "license": "GPL-3.0",
-  "_release": "798e51a3a8",
+  "_release": "648b42d888",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "798e51a3a86289604e64b403cc384f87dc685a9d"
+    "commit": "648b42d888a6051f035f89c8636ef58090b1418a"
   },
   "_source": "git://github.com/walkgrovedev/adapt-walkgrove-panzoom.git",
-  "_target": "1.0.0",
+  "_target": "*",
   "_originalSource": "adapt-walkgrove-panzoom",
   "_direct": true
 }
