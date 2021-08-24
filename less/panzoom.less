@@ -206,7 +206,7 @@
 
             background-color: @item-color;
             color: @item-color-inverted;
-            padding: 0 1rem;
+            padding: 0.5rem 1rem;
 
             z-index: 2;
 
@@ -289,4 +289,27 @@
 @keyframes scaleOut {
     from { transform: scale(2); }
     to { transform: scale(1); }
+}
+
+
+
+
+.dir-rtl {
+
+    .panzoom__controls .js-panzoom-next {
+        left: 0;
+        right: auto;
+    }
+
+    .panzoom__controls .js-panzoom-prev {
+        right: 0;
+        left: auto;
+    }
+
+    .panzoom__images .panzoom__image-small {
+        left: 0;
+        right: auto;
+    }
+
+
 }
